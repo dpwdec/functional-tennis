@@ -1,4 +1,5 @@
 import { pipe, writeAndReturn, write } from './utils.js';
+import { add } from './math.js'
 import readline from 'readline';
 
 const rl = readline.createInterface({
@@ -9,7 +10,6 @@ const rl = readline.createInterface({
 const initialScore = x => y => [x, y]
 const score = initialScore(0)(0)
 
-const add = x => y => y + x
 const plusOne = add(1)
 
 /**
