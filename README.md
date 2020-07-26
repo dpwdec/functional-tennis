@@ -1,6 +1,9 @@
 # Functional Tennis Kata
 
-
+Solution for the `Tennis Kata` using functional javascript. This means writing code that:
+- Does not have an mutable state: `var` and `let` are not allowed.
+- Only uses recursive looping
+- Composes functions to accomplish tasks rather than making specific implementations
 
 `Rules`:
 - A game is won by the first player to have won at least four points in total and at least two points more than the opponent.
