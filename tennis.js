@@ -36,11 +36,6 @@ const updateScore = (answer, score) => {
   return incrementPlayerTwo(score)
 }
 
-const main = () => {
-  write('Welcome to a game of tennis');
-  runGame(score)
-}
-
 const runGame = (score) => {
   write(score);
   rl.question('Which player scored? ', (msg) => {
