@@ -45,7 +45,7 @@ const updateScore = (answer, score) => {
 const runGame = (answer, score) => {
   const updatedScore = updateScore(answer, score)
   write(updatedScore);
-  rl.question('Which player scored?', (msg) => {
+  rl.question('Which player scored? ', (msg) => {
     runGame(msg, updatedScore);
   });
 }
