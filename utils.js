@@ -5,6 +5,10 @@ const writeAndReturn = msg => {
   return msg;
 }
 
+const map = fn => mappable => mappable.map(fn)
+
+const filter = fn => filterable => filterable.filter(fn)
+
 const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x)
 
 /**
@@ -15,4 +19,4 @@ const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x)
  */
 const mapAt = fn => target => mappable => mappable.map((value, index) => index === target ? fn(value) : value)
 
-export { pipe, mapAt, write, writeAndReturn };
+export { pipe, map, mapAt, filter, write, writeAndReturn };
