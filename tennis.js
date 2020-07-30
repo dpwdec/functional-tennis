@@ -1,5 +1,6 @@
 import { pipe, mapAt, writeAndReturn, write } from './utils/collectionUtils.js';
 import { add } from './math.js'
+import { formatInput } from './input.js'
 import readline from 'readline';
 
 const rl = readline.createInterface({
@@ -64,7 +65,7 @@ const incrementPlayerOne = mapAtInc(0)
 const incrementPlayerTwo = mapAtInc(1)
 
 const updateScore = (answer, score) => {
-  if(answer === '1') { return incrementPlayerOne(score) }
+  if(formatInput(answer) === 1) { return incrementPlayerOne(score) }
   return incrementPlayerTwo(score)
 }
 
@@ -75,5 +76,5 @@ const runGame = (score) => {
   });
 }
 
-// write('Welcome to a game of tennis');
-// runGame(score);
+write('Welcome to a game of tennis');
+runGame(score);

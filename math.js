@@ -1,5 +1,6 @@
 const add = x => y => y + x
 
+// number -> bool
 const range = min => max => value => value < max && value > min
 
 const ceil = max => x => x > max ?  max :  x
