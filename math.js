@@ -1,3 +1,5 @@
 const add = x => y => y + x
 
-export { add };
+const range = min => max => value => value < max && value > min
+
+export { add, range };
