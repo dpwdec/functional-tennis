@@ -1,6 +1,6 @@
 import { pipe, filter } from './utils/collectionUtils.js'
 import { charCode, charToInt, joinAt, splitAt } from './utils/stringUtils.js'
-import { range, floor, ceil } from './math.js'
+import { range, floor, ceil } from './utils/math.js'
 
 const _isNumber = pipe(
   charCode,
