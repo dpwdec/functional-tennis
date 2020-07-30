@@ -1,4 +1,4 @@
-import { pipe, mapAt, writeAndReturn, write } from './utils.js';
+import { pipe, mapAt, writeAndReturn, write } from './utils/collectionUtils.js';
 import { add } from './math.js'
 import readline from 'readline';
 

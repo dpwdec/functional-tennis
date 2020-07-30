@@ -1,31 +1,19 @@
-import { pipe, filter, map } from './utils'
-import { range } from './math'
+import { pipe, filter } from './utils/collectionUtils'
+import { charCode, charToInt, joinAt, splitAt } from './utils/stringUtils'
+import { range, floor, ceil } from './math'
 
-// handles user input
+const _isNumber = pipe(
+  charCode,
+  range(47)(58)
+)
+
+
 /*
 string --> split --> isChar --> join --> toInt --> ceil --> floor --> number
 */
-const charCodeRange = range(47)(58) 
-const charCode = c => c.charCodeAt(0)
-const isNumber = pipe(
-  charCode,
-  charCodeRange
-)
-
-const findNumbers = filter(isNumber)
-
-const splitAt = delimeter => string => string.split(delimeter)
-
-const joinAt = delimeter => string => string.join(delimeter)
-
-const charToInt = x => parseInt(x)
-
-const ceil = max => x => x > max ?  max :  x
-const floor = min => x => x < min ? min : x
-
 const formatInput = pipe(
   splitAt(''),
-  filter(isNumber),
+  filter(_isNumber),
   joinAt(''),
   charToInt,
   ceil(2),
@@ -33,7 +21,3 @@ const formatInput = pipe(
 )
 
 export { formatInput }
-
-// module.exports = { 
-//   inputStringToPlayerChoice: inputStringToPlayerChoice 
-// }
