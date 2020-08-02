@@ -9,7 +9,11 @@ describe('report', () => {
     expect(report([1, 1])).toEqual("fifteen fifteen")
   })
 
-  it('returns thirty thirty from [1, 1]', () => {
+  it('returns fifteen thirty from [1, 2]', () => {
     expect(report([1, 2])).toEqual("fifteen thirty")
+  })
+
+  it('returns fifteen forty from [1, 3]', () => {
+    expect(report([1, 3])).toEqual("fifteen forty")
   })
 })
