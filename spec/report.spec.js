@@ -8,4 +8,8 @@ describe('report', () => {
   it('returns fifteen fifteen from [1, 1]', () => {
     expect(report([1, 1])).toEqual("fifteen fifteen")
   })
+
+  it('returns thirty thirty from [1, 1]', () => {
+    expect(report([1, 2])).toEqual("fifteen thirty")
+  })
 })
