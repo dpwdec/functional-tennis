@@ -19,4 +19,6 @@ const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x)
  */
 const mapAt = fn => target => mappable => mappable.map((value, index) => index === target ? fn(value) : value)
 
-export { pipe, map, mapAt, filter, write, writeAndReturn };
+const every = fn => collection => collection.every(fn)
+
+export { pipe, map, mapAt, filter, every, write, writeAndReturn };
